@@ -1,10 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Login from './components/login.jsx';
+// import MyHeader from './components/header.jsx';
+import React from 'react';
+import { Routes ,Route } from 'react-router-dom';
 function App() {
+
+  // const [name,setName] = useState('Ashley');
+  // const [users,setUsers] = useState([]);
+
+  // useEffect(()=>{
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  //   .then((response)=>{
+  //     if(!response.ok){
+  //         console.log('Error');
+  //     }
+  //    return response.json()
+  //   })
+  //   .then((data)=>setUsers(data))
+  //   .catch((err) => {
+  //     console.log(err.message);
+  //   });
+  // },[]);
+  // const changeName = ()=>{
+  //   if(name==='Ashley') setName('ShahRaaza');
+  //   if(name==='ShahRaaza') setName('Ashley');
+   
+  // };
   return (
     <div className="App">
-      <header className="App-header">
+          <Routes>                
+          <Route path='/' element={<Login/>} />
+          </Routes>
+      {/* <MyHeader/> */}
+
+      {/* <h1>
+        Users: {users.length}
+      </h1> */}
+      {/* <div>
+    {  users.map((user,index) => <h4 key={index}>{user.name}</h4>)}
+     
+        </div> */}
+      {/* <button onClick={changeName}>
+Change
+      </button> */}
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +56,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
