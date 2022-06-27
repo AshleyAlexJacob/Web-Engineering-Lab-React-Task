@@ -1,4 +1,6 @@
 import React, { useState} from 'react';
+import MyHeader from './header.jsx';
+
 
 function Login() {
     const [user,setUser] = useState({
@@ -21,6 +23,7 @@ alert('Password: '+user.password);
 }
     return ( 
         <div>
+        <MyHeader status={1}/>
           <form onSubmit={e => {handleLogin(e)}}>
         <label>Email</label>
         <br />

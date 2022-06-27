@@ -1,5 +1,7 @@
 
 import Login from './components/login.jsx';
+import Home from './components/home';
+
 // import MyHeader from './components/header.jsx';
 import React from 'react';
 import { Routes ,Route } from 'react-router-dom';
@@ -28,8 +30,10 @@ function App() {
   // };
   return (
     <div className="App">
-          <Routes>                
-          <Route path='/' element={<Login/>} />
+          <Routes>      
+          <Route path='/' element={<Home/>} />
+                    
+          <Route path='/login' element={<Login/>} />
           </Routes>
       {/* <MyHeader/> */}
 
