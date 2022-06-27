@@ -1,3 +1,7 @@
+# About this Repository
+
+The tasks involves a simple implementation (Simulation) of retrieval of Data and sending that form data to server and handling data at frontend plus configuration of basic routing with React Router.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
