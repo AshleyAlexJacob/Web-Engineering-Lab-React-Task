@@ -2,10 +2,12 @@ import React, { useState} from 'react';
 import MyHeader from './header.jsx';
 
 
-function Login() {
+function SignUp() {
     const [user,setUser] = useState({
         'email':'',
         'password':'',
+        'name':'',
+    
     });
     const handleChange = (updatedValue) => {
         setUser(user => ({
@@ -14,24 +16,39 @@ function Login() {
            }));
          }
  const  handleLogin=(event)=>{
-  console.log('Server Connection');
-  console.log(user);
-  
-alert('To The Server');
-alert('User:\n'+user);
 
+    console.log('Server Connection');
+    console.log(user);
+    
+  alert('To The Server');
+  alert('User:\n'+user);
 
 
 }
     return ( 
         <div>
-        <MyHeader status={1}/>
+        <MyHeader status={2}/>
         <div className="container m-5">
             <p className="display-4 text-center">
-              Login
+              Sign Up
             </p>
           <div className="row  justify-content-center m-5">
           <form className='mx-1 my-5' onSubmit={e => {handleLogin(e)}}>
+          <div className="form-group ">
+        <label>Name</label>
+        <input 
+          name='name' 
+          type='text' 
+          className="form-control my-1"
+          placeholder="Enter Name"
+          defaultValue={user.name}
+          onChange={(e) => handleChange({name:e.target.value})}
+        />
+        
+        </div>
+        <br />
+       
+       
         <div className="form-group ">
         <label>Email</label>
         <input 
@@ -66,8 +83,8 @@ alert('User:\n'+user);
         <input 
           className='btn btn-dark  form-control my-5 p-2'
           type='submit' 
-          placeholder='login'
-          value='Login' 
+          placeholder='Sign Up'
+          value='SignUp' 
         />
       
         </div>
@@ -80,4 +97,4 @@ alert('User:\n'+user);
      );
 }
 
-export default Login;
+export default SignUp;
